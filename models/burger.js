@@ -6,13 +6,18 @@ const burger = {
             callback(res);
         });
     },
-    insertOne: (cols, vals, callback) => {
-        orm.insertOne('burgers', cols, vals, (res) => {
+    insertOne: (col, val, callback) => {
+        orm.insertOne('burgers', col, val, (res) => {
             callback(res);
         });
     },
-    updateOne: (col, val, callback) => {
-        orm.updateOne('burgers', col, val, (res) => {
+    updateOne: (col, val, conditionCol, conditionVal, callback) => {
+        orm.updateOne('burgers', col, val, conditionCol, conditionVal, (res) => {
+            callback(res);
+        });
+    },
+    deleteOne: (conditionCol, conditionVal, callback) => {
+        orm.deleteOne('burgers', conditionCol, conditionVal, (res) => {
             callback(res);
         });
     }

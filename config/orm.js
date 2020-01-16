@@ -1,5 +1,9 @@
 const connection = require('./connection');
 
+
+
+
+
 const orm = {
     selectAll: (table, callback) => {
         let query = `SELECT * FROM ??`;
@@ -15,12 +19,19 @@ const orm = {
             callback(result);
         });
     },
-    updateOne: (table, col, val, callback) => {
-        let query = `UPDATE ?? SET ?? = ?`;
-        connection.query(query, [table, col, val], (err, result) => {
+    updateOne: (table, col, val, conditionCol, conditionVal, callback) => {
+        let query = `UPDATE ?? SET ?? = ? WHERE ?? = ?`;
+        connection.query(query, [table, col, val, conditionCol, conditionVal], (err, result) => {
             if(err) throw err;
             callback(result);
         });
+    },
+    deleteOne: (table, conditionCol, conditionVal, callback) => {
+        let query = `DELETE FROM ?? WHERE ?? = ?`;
+        connection.query(query, [table, conditionCol, conditionVal], (err, result) => {
+            if(err) throw err;
+            callback(result);
+        });    
     }
 }
 

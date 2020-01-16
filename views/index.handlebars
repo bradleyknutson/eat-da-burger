@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <img src="/assets/images/burger.png" alt="Juicy Cheeseburger">
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            {{#each burger}}
+                {{#unless devoured}}
+                    {{> burgers/burger-block devoured=false}}
+                {{/unless}}
+            {{/each}}
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-5">
+            {{#each burger}}
+                {{#if devoured}}
+                    {{> burgers/burger-block devoured=true}}
+                {{/if}}
+            {{/each}}            
+        </div>
+    </div>
+    <div class="col text-center">
+        <form action="/api/burgers/create" method="post">
+            <div class="form-group">
+                <label for="burgerNameInput">Burger Name</label>
+                <input type="text" name="burgerNameInput" id="burgerNameInput">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</div>
