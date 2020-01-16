@@ -8,7 +8,7 @@
     </div>
     <div class="row">
         <div class="col-md-5">
-            {{#each burger}}
+            {{#each burgers}}
                 {{#unless devoured}}
                     {{> burgers/burger-block devoured=false}}
                 {{/unless}}
@@ -24,11 +24,11 @@
         </div>
     </div>
     <div class="col text-center">
-        <form action="/api/burgers/create" method="post">
+        <form>
             <div class="form-group">
                 <label for="burgerNameInput">Burger Name</label>
-                <input type="text" name="burgerNameInput" id="burgerNameInput">
-                <input type="submit" value="Submit">
+                <input type="text" name="burgerNameInput" id="burgerNameInput" class="form-control">
+                <button type="button" class="btn btn-outline-primary btn-block" id="addOrder">Add Order</button>
             </div>
         </form>
     </div>
