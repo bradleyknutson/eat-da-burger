@@ -1,0 +1,22 @@
+$primary-color: #924aff;
+$secondary-color: #fff64a;
+$tertiary-color: #ff9b4a;
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: $primary-color;
+}
+
+.container {
+    background-color: #ffffff;
+    border: 1em solid $secondary-color;
+}
+
+.burgerRow {
+    line-height: 2em;
+    margin-bottom: 20px;
+}
+
+button.eat-clean {
+    background-color: $tertiary-color;
+}
