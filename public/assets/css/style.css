@@ -1,1 +1,19 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: #924aff;
+}
+
+.container {
+  background-color: #ffffff;
+  border: 1em solid #fff64a;
+}
+
+.burgerRow {
+  line-height: 2em;
+  margin-bottom: 20px;
+}
+
+button.eat-clean {
+  background-color: #ff9b4a;
+}
+/*# sourceMappingURL=style.css.map */
