@@ -1,9 +1,5 @@
 const connection = require('./connection');
 
-
-
-
-
 const orm = {
     selectAll: (table, callback) => {
         let query = `SELECT * FROM ??`;
