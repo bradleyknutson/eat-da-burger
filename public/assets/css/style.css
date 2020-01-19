@@ -1,11 +1,13 @@
 body {
   font-family: 'Rubik', sans-serif;
-  background-color: #924aff;
+  font-weight: 700;
+  background-color: #222;
 }
 
 .container {
-  background-color: #ffffff;
-  border: 1em solid #fff64a;
+  background: url("/assets/images/checkerboard-cross/checkerboard-cross.png");
+  padding: 10px;
+  margin-top: 20px;
 }
 
 .burgerRow {
@@ -13,7 +15,7 @@ body {
   margin-bottom: 20px;
 }
 
-button.eat-clean {
-  background-color: #ff9b4a;
+.eat-clean {
+  background-color: #FACF3E;
 }
 /*# sourceMappingURL=style.css.map */
